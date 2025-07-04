@@ -1,6 +1,6 @@
-package Java_MongoDB.demo.repository;
+package Java_MongoDB.Funcionarios.repository;
 
-import Java_MongoDB.demo.Enty.Funcionario;
+import Java_MongoDB.Funcionarios.Enty.Funcionario;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

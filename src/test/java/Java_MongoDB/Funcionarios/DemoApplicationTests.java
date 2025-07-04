@@ -1,4 +1,4 @@
-package Java_MongoDB.demo;
+package Java_MongoDB.Funcionarios;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

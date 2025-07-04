@@ -1,4 +1,4 @@
-package Java_MongoDB.demo.Enty;
+package Java_MongoDB.Funcionarios.Enty;
 
 import java.util.Objects;
 
