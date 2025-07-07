@@ -18,7 +18,7 @@ public class FuncionariosServiceImplement implements FuncionarioService {
     @Override
     public List<Funcionario> listAll(){
         List<Funcionario> funcionarios = new ArrayList<>();
-
+        funcionarioRepository.findAll().forEach(funcionarios::add);
         return funcionarios;
     }
 

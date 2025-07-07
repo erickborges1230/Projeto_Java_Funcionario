@@ -1,7 +1,10 @@
 package Java_MongoDB.Funcionarios.Enty;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Objects;
 
+@Document(collection = "Funcionários")
 public class Funcionario {
     private String nome;
     private int idade;
