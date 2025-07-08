@@ -4,7 +4,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Objects;
 
-@Document(collection = "Funcionários")
+@Document(collection = "funcionarios")
 public class Funcionario {
     private String nome;
     private int idade;

@@ -16,8 +16,8 @@ public class FuncionarioController {
     @Autowired
     private FuncionarioService funcionarioService;
 
-    @GetMapping("/listarFuncionario")
-    public ResponseEntity<List<Funcionario>> listResponseEntity()
+    @GetMapping("/listarFuncionarios")
+    public ResponseEntity<List<Funcionario>> listarFuncionarios()
     {
         List<Funcionario> funcionarios = funcionarioService.listAll();
         return new ResponseEntity<List<Funcionario>>(funcionarios, HttpStatus.OK);

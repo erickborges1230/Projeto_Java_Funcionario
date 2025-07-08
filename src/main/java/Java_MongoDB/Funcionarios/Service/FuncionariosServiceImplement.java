@@ -13,7 +13,7 @@ import java.util.List;
 public class FuncionariosServiceImplement implements FuncionarioService {
 
     //Criando uma injeção de dependência do FuncionarioRepository
-    @Autowired
+    @Autowired(required = true)
     private FuncionarioRepository funcionarioRepository;
     @Override
     public List<Funcionario> listAll(){
