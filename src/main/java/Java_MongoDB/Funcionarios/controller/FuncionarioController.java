@@ -15,7 +15,19 @@ import java.util.List;
 public class FuncionarioController {
     @Autowired
     private FuncionarioService funcionarioService;
+    @GetMapping("/")
+    public ResponseEntity<String> inicio()
+    {
+        String response = """
+                <html>
+                    <body>
+                        <a href="listarFuncionarios">1. Listar Funcionários<a/>
+                    </body>
+                </html>
+                """;
 
+        return new ResponseEntity<String>(response, HttpStatus.OK);
+    }
     @GetMapping("/listarFuncionarios")
     public ResponseEntity<List<Funcionario>> listarFuncionarios()
     {
