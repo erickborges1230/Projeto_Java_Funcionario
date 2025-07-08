@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 public class FuncionarioController {
-    @Autowired
+    @Autowired(required = true)
     private FuncionarioService funcionarioService;
     @GetMapping("/")
     public ResponseEntity<String> inicio()

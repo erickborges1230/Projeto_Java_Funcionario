@@ -2,9 +2,12 @@ package Java_MongoDB.Funcionarios.Enty;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.lang.annotation.Target;
 import java.util.Objects;
 
+
 @Document(collection = "funcionarios")
+
 public class Funcionario {
     private String nome;
     private int idade;
@@ -90,19 +93,22 @@ public class Funcionario {
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(nome, idade, cargo, departamento, cidade, estado, formatoTrabalho, salario);
+    }
+
+    @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
+        if (this == o) return true;
+        if (!(o instanceof Funcionario that))
             return false;
-        Funcionario that = (Funcionario) o;
-        return idade == that.idade
-                && Double.compare(salario, that.salario) == 0
-                && Objects.equals(nome, that.nome) && Objects.equals(cargo, that.cargo)
+        return idade == that.idade && Double.compare(salario, that.salario) == 0 && Objects.equals(nome, that.nome)
+                && Objects.equals(cargo, that.cargo)
                 && Objects.equals(departamento, that.departamento)
                 && Objects.equals(cidade, that.cidade) && Objects.equals(estado, that.estado)
                 && Objects.equals(formatoTrabalho, that.formatoTrabalho);
     }
+
 
     @Override
     public String toString() {
